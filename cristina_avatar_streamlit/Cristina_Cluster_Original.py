@@ -14,10 +14,12 @@ import base64
 import os
 import google.auth
 
+from google.oauth2 import service_account  
+# Create API client. 
+credentials_1 = service_account.Credentials.from_service_account_info(     st.secrets["gcp_service_account"] )
+
 from streamlit_extras.app_logo import add_logo
 add_logo("logos/2022-05_Merkle-logo-color.png", height = 25)
-
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credenciales/bigdata-jupyterserver-363abb80142a.json"
 
 st.title("Conversa con Cristina")
 
@@ -48,6 +50,7 @@ def definir_cliente(definicion_IA, nombre = "IAn"):
       vertexai=True,
       project="bigdata-jupyterserver",
       location="global",
+      credentials = credentials_1
   )
 
   nombre = nombre
