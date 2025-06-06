@@ -16,8 +16,8 @@ st.set_page_config(
 show_pages([
     Page("mujer_cluster.py","Powered by Vertex AI, Google."),
     Page("Cristina_Cluster_Original.py","Cristina"),
-    Page("Cristina_Cluster_Original.py","Pepe"),
-    Page("Cristina_Cluster_Original.py","Lara")
+    Page("Pepe_Cluster_Original.py","Pepe"),
+    Page("Lara_Cluster_Original.py","Lara")
 ])
 
 
